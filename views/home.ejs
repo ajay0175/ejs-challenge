@@ -1,0 +1,13 @@
+<%- include("./partials/header") %>
+
+<h1>HOME</h1>
+<p> <%= StartingContent %> </p>
+<% console.log(storage) %>
+
+<% storage.forEach(element => { %>
+<h1><%= element.Title %></h1>
+<p><%= element.Description.substring(0, 100) + "..." %>
+    <a href="/storage/<%= element.Title %> ">read more</a></p>
+<% }) %>
+
+<%- include("./partials/footer") %>
